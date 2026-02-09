@@ -11,28 +11,28 @@ const Hero = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Create a master timeline for sequenced animations
-      const tl = gsap.timeline({ defaults: { ease: 'power4.out' } })
+      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
       
       // Set initial states with blur
-      gsap.set('.hero-greeting', { opacity: 0, y: 40, filter: 'blur(10px)' })
-      gsap.set('.hero-name-line-1', { opacity: 0, y: 80, filter: 'blur(20px)' })
-      gsap.set('.hero-name-line-2', { opacity: 0, y: 80, filter: 'blur(20px)' })
-      gsap.set('.hero-title', { opacity: 0, y: 30, filter: 'blur(10px)' })
-      gsap.set('.hero-desc', { opacity: 0, y: 30, filter: 'blur(8px)' })
-      gsap.set('.hero-btn', { opacity: 0, y: 40, scale: 0.9 })
-      gsap.set('.hero-image-container', { opacity: 0, scale: 0.85, y: 40 })
-      gsap.set('.hero-ring-1', { opacity: 0, scale: 0.8 })
-      gsap.set('.hero-ring-2', { opacity: 0, scale: 0.8 })
-      gsap.set('.hero-ring-3', { opacity: 0, scale: 0.8 })
-      gsap.set('.hero-status', { opacity: 0, y: 20, scale: 0.9 })
+      gsap.set('.hero-greeting', { opacity: 0, y: 25, filter: 'blur(6px)' })
+      gsap.set('.hero-name-line-1', { opacity: 0, y: 50, filter: 'blur(12px)' })
+      gsap.set('.hero-name-line-2', { opacity: 0, y: 50, filter: 'blur(12px)' })
+      gsap.set('.hero-title', { opacity: 0, y: 20, filter: 'blur(6px)' })
+      gsap.set('.hero-desc', { opacity: 0, y: 20, filter: 'blur(5px)' })
+      gsap.set('.hero-btn', { opacity: 0, y: 25, scale: 0.95 })
+      gsap.set('.hero-image-container', { opacity: 0, scale: 0.9, y: 25 })
+      gsap.set('.hero-ring-1', { opacity: 0, scale: 0.85 })
+      gsap.set('.hero-ring-2', { opacity: 0, scale: 0.85 })
+      gsap.set('.hero-ring-3', { opacity: 0, scale: 0.85 })
+      gsap.set('.hero-status', { opacity: 0, y: 15, scale: 0.95 })
       gsap.set('.hero-line', { scaleX: 0 })
-      gsap.set('.hero-orb', { opacity: 0, scale: 0.5 })
+      gsap.set('.hero-orb', { opacity: 0, scale: 0.7 })
 
       // Orb ambient animation
       tl.to('.hero-orb', { 
         opacity: 1, 
         scale: 1,
-        duration: 2, 
+        duration: 0.8, 
         ease: 'power2.out' 
       })
 
@@ -41,52 +41,52 @@ const Hero = () => {
         opacity: 1, 
         scale: 1, 
         y: 0,
-        duration: 1.2, 
+        duration: 0.6, 
         ease: 'power3.out' 
-      }, '-=1.5')
-      .to('.hero-ring-1', { opacity: 1, scale: 1, duration: 1, ease: 'power2.out' }, '-=0.8')
-      .to('.hero-ring-2', { opacity: 1, scale: 1, duration: 1, ease: 'power2.out' }, '-=0.7')
-      .to('.hero-ring-3', { opacity: 1, scale: 1, duration: 1, ease: 'power2.out' }, '-=0.6')
+      }, '-=0.6')
+      .to('.hero-ring-1', { opacity: 1, scale: 1, duration: 0.5, ease: 'power2.out' }, '-=0.4')
+      .to('.hero-ring-2', { opacity: 1, scale: 1, duration: 0.5, ease: 'power2.out' }, '-=0.35')
+      .to('.hero-ring-3', { opacity: 1, scale: 1, duration: 0.5, ease: 'power2.out' }, '-=0.3')
       
       // Text animations with elegant stagger
       .to('.hero-greeting', { 
         opacity: 1, y: 0, filter: 'blur(0px)', 
-        duration: 0.8 
-      }, '-=0.6')
+        duration: 0.45 
+      }, '-=0.35')
       .to('.hero-line', { 
         scaleX: 1, 
-        duration: 0.6,
+        duration: 0.35,
         ease: 'power2.inOut'
-      }, '-=0.4')
+      }, '-=0.25')
       .to('.hero-name-line-1', { 
         opacity: 1, y: 0, filter: 'blur(0px)', 
-        duration: 1,
-        ease: 'power4.out'
-      }, '-=0.3')
+        duration: 0.5,
+        ease: 'power3.out'
+      }, '-=0.2')
       .to('.hero-name-line-2', { 
         opacity: 1, y: 0, filter: 'blur(0px)', 
-        duration: 1,
-        ease: 'power4.out'
-      }, '-=0.8')
+        duration: 0.5,
+        ease: 'power3.out'
+      }, '-=0.4')
       .to('.hero-title', { 
         opacity: 1, y: 0, filter: 'blur(0px)', 
-        duration: 0.8 
-      }, '-=0.5')
+        duration: 0.4 
+      }, '-=0.3')
       .to('.hero-desc', { 
         opacity: 1, y: 0, filter: 'blur(0px)', 
-        duration: 0.8 
-      }, '-=0.4')
+        duration: 0.4 
+      }, '-=0.25')
       .to('.hero-btn', { 
         opacity: 1, y: 0, scale: 1, 
-        duration: 0.6, 
-        stagger: 0.12,
-        ease: 'back.out(1.7)' 
-      }, '-=0.3')
+        duration: 0.35, 
+        stagger: 0.08,
+        ease: 'back.out(1.5)' 
+      }, '-=0.2')
       .to('.hero-status', { 
         opacity: 1, y: 0, scale: 1, 
-        duration: 0.6,
-        ease: 'back.out(2)' 
-      }, '-=0.4')
+        duration: 0.35,
+        ease: 'back.out(1.8)' 
+      }, '-=0.25')
 
       // Floating animation for image after entrance
       gsap.to('.hero-image-container', {
@@ -95,7 +95,7 @@ const Hero = () => {
         repeat: -1,
         yoyo: true,
         ease: 'sine.inOut',
-        delay: 2
+        delay: 1
       })
 
       // Subtle rotation for rings
@@ -211,15 +211,18 @@ const Hero = () => {
                 src="/arcel-profile.jpg"
                 alt="Arcel Espiritu"
                 fill
-                className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100"
+                className="object-cover brightness-105 contrast-[1.05] saturate-[1.1] transition-all duration-700 scale-105 group-hover:scale-100 group-hover:brightness-110"
                 priority
               />
               
-              {/* Simple vignette */}
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_40%,#0a0a0a_100%)] opacity-50 pointer-events-none"></div>
+              {/* Soft vignette - reduced opacity for brighter look */}
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_50%,#0a0a0a_100%)] opacity-30 pointer-events-none"></div>
+              
+              {/* Subtle warm overlay for natural skin tones */}
+              <div className="absolute inset-0 bg-gradient-to-b from-amber-500/[0.03] to-transparent pointer-events-none"></div>
               
               {/* Subtle shine on hover */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.05] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.08] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
             </div>
             
             {/* Status badge - with green indicator */}

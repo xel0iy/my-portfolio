@@ -106,7 +106,7 @@ const Contact = () => {
             href="https://dribbble.com/xel-zyv"
             target="_blank"
             rel="noopener noreferrer"
-            className="contact-card glass-card card-neon-hover rounded-xl sm:rounded-2xl p-6 sm:p-8 text-center group transition-all duration-300 sm:col-span-2 lg:col-span-1"
+            className="contact-card glass-card card-neon-hover rounded-xl sm:rounded-2xl p-6 sm:p-8 text-center group transition-all duration-300"
           >
             <div className="relative w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 glass rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-white/10 transition-all duration-300">
               <div className="absolute inset-0 rounded-xl sm:rounded-2xl blur-xl opacity-0 group-hover:opacity-60 transition-all duration-300"
@@ -117,6 +117,27 @@ const Contact = () => {
             </div>
             <h3 className="font-semibold text-white mb-2 text-sm sm:text-base">Dribbble</h3>
             <p className="text-neutral-500 text-xs sm:text-sm group-hover:text-neutral-400 transition-colors">dribbble.com/xel-zyv</p>
+          </a>
+
+          <a
+            href="https://www.figma.com/design/Si4piUjGewjgXENurVzzaL/Xel-Projects?node-id=0-1&t=z9O1CfgozXZFF6Z3-1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-card glass-card card-neon-hover rounded-xl sm:rounded-2xl p-6 sm:p-8 text-center group transition-all duration-300"
+          >
+            <div className="relative w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 glass rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-white/10 transition-all duration-300">
+              <div className="absolute inset-0 rounded-xl sm:rounded-2xl blur-xl opacity-0 group-hover:opacity-60 transition-all duration-300"
+                   style={{ background: 'linear-gradient(135deg, rgba(127,92,255,0.5), rgba(91,157,255,0.4))' }}></div>
+              <svg className="relative w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-neutral-300 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"/>
+                <path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"/>
+                <path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"/>
+                <path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"/>
+                <path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/>
+              </svg>
+            </div>
+            <h3 className="font-semibold text-white mb-2 text-sm sm:text-base">Figma</h3>
+            <p className="text-neutral-500 text-xs sm:text-sm group-hover:text-neutral-400 transition-colors">Xel Projects</p>
           </a>
         </div>
 
